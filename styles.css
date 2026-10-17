@@ -412,6 +412,35 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .footer__logo { width: 46px; height: 46px; object-fit: contain; flex: none; }
 .footer p { margin: 0; }
 
+/* ---------- Режим «материал закрыт» ---------- */
+/* По умолчанию (html.mode-open) заглушка скрыта. */
+.closed { display: none; }
+
+html.mode-closed .layout,
+html.mode-closed .topbar__progress { display: none; }
+
+html.mode-closed .closed {
+  display: flex;
+  justify-content: center;
+  padding: 64px 22px 90px;
+}
+
+.closed__card {
+  width: 100%;
+  max-width: 620px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 40px 36px 34px;
+  text-align: center;
+}
+.closed__logo { width: 88px; height: 88px; object-fit: contain; margin-bottom: 6px; }
+.closed__title { margin: 8px 0 14px; font-size: 28px; line-height: 1.22; letter-spacing: -0.02em; }
+.closed__text { margin: 0 auto 26px; max-width: 46ch; color: var(--muted); }
+.closed__links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.closed__hint { margin: 28px 0 0; font-size: 13px; color: var(--muted); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .layout { grid-template-columns: minmax(0, 1fr); gap: 18px; padding-top: 18px; }
@@ -436,4 +465,9 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
   .photo img, .photo--wide img { height: 200px; }
   .task__img { height: 160px; }
   .exc-cards { grid-template-columns: 1fr; }
+  html.mode-closed .closed { padding: 32px 16px 56px; }
+  .closed__card { padding: 28px 20px 26px; }
+  .closed__logo { width: 70px; height: 70px; }
+  .closed__title { font-size: 22px; }
+  .closed__links { flex-direction: column; }
 }

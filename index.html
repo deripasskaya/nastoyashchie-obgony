@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="mode-open">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -501,6 +501,31 @@
         </p>
       </footer>
     </main>
+  </div>
+
+  <!-- ============================================================
+       Заглушка «материал закрыт».
+       Показывается, когда у <html> стоит класс mode-closed
+       (вверху файла, строка 2). Тогда раздел .layout скрывается,
+       а эта карточка становится видимой.
+       ============================================================ -->
+  <div class="closed" id="closed">
+    <div class="closed__card">
+      <img class="closed__logo" src="pictures/LogoProspect.png" alt="Логотип автошколы «Проспект»" />
+      <p class="eyebrow">Автошкола «Проспект»</p>
+      <h1 class="closed__title">Материал доступен участникам мастер-класса</h1>
+      <p class="closed__text">
+        Теория по обгонам открыта для учеников, которые прошли мастер-класс «Настоящие обгоны»,
+        — доступ выдаётся на занятии. Если вы были на мастер-классе и хотите вернуться к материалу,
+        напишите нам.
+      </p>
+      <div class="closed__links">
+        <!-- TODO: подставить ссылки на соцсети автошколы -->
+        <a class="btn btn--primary" href="#" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">ВКонтакте</a>
+      </div>
+      <p class="closed__hint">Автошкола «Проспект» · мастер-класс «Настоящие обгоны»</p>
+    </div>
   </div>
 
   <script src="app.js"></script>
