@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Настоящие обгоны — теория для самостоятельного изучения</title>
+  <meta name="description" content="Мастер-класс «Настоящие обгоны»: как подготовить обгон, когда от него отказаться, где обгон запрещён. Теория, схемы, интерактив и тест." />
+  <link rel="icon" type="image/png" href="pictures/LogoProspect.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="#top">
+        <img class="brand__logo" src="pictures/LogoProspect.png" alt="Логотип автошколы" />
+        <span class="brand__text">
+          <span class="brand__title">Настоящие обгоны</span>
+          <span class="brand__sub">Мастер-класс · теория</span>
+        </span>
+      </a>
+      <div class="topbar__progress">
+        <div class="progress progress--top">
+          <div class="progress__bar"><div class="progress__fill" id="progress-fill"></div></div>
+          <span class="progress__text" id="progress-text">0%</span>
+        </div>
+        <a class="btn btn--ghost btn--small" href="#test">К тесту</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout" id="top">
+    <aside class="sidebar" aria-label="Содержание">
+      <p class="sidebar__title">Содержание</p>
+      <nav class="sidebar__nav" id="nav"></nav>
+      <div class="sidebar__meta" id="sidebar-meta"></div>
+    </aside>
+
+    <main class="content">
+
+      <!-- HERO -->
+      <section class="hero card">
+        <img class="hero__img" src="pictures/slides/title.jpg" alt="Автомобиль на встречной полосе во время обгона" />
+        <div class="hero__body">
+          <p class="eyebrow">Мастер-класс</p>
+          <h1>Настоящие обгоны</h1>
+          <p class="hero__lead">
+            Обгон — одно из самых рисковых действий на дороге. Это всегда про выезд на встречку,
+            принятие решений на скорости, оценку ситуации и прогноз действий других участников движения.
+            Здесь мы разберём, как подготовить обгон, когда от него отказаться и почему важно
+            отработать этот навык на практике.
+          </p>
+          <ul class="hero__meta">
+            <li>≈ 20 минут</li>
+            <li>7 разделов</li>
+            <li>интерактив и разбор задач</li>
+            <li>итоговый тест</li>
+          </ul>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#s1">Начать изучение</a>
+            <a class="btn btn--ghost" href="#test">Сразу к тесту</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1 -->
+      <section class="card section" id="s1" data-title="Что такое обгон">
+        <p class="eyebrow">Раздел 1</p>
+        <h2>Что такое обгон</h2>
+        <p class="lead">
+          <b>Обгон</b> — это опережение одного или нескольких транспортных средств, связанное с выездом
+          на полосу, предназначенную для встречного движения, и последующим возвращением на ранее занимаемую полосу.
+        </p>
+        <div class="callout callout--key">
+          <span class="callout__icon">🔑</span>
+          <p>
+            Обгон = <b>перестроение на встречку, опережение, перестроение в свою полосу</b>.
+            Опережение без выезда на встречку обгоном не является.
+          </p>
+        </div>
+
+        <div class="callout callout--note">
+          <span class="callout__icon">💡</span>
+          <p>
+            Выезд на встречную полосу возможен только на <b>двухполосной дороге</b> (по одной полосе
+            в каждом направлении). Обгоном также называется опережение на <b>трёхполосной дороге</b>
+            с двусторонним движением.
+          </p>
+        </div>
+
+        <div class="photos">
+          <figure class="photo">
+            <img src="pictures/slides/obgon-fura.jpg" alt="Автомобили за грузовиком на двухполосной дороге" loading="lazy" />
+            <figcaption>Обгон: дорога по одной полосе в каждую сторону</figcaption>
+          </figure>
+          <figure class="photo">
+            <img src="pictures/slides/operezhenie.jpg" alt="Многополосная дорога, перестроение в соседнюю полосу" loading="lazy" />
+            <figcaption>Опережение: несколько полос в одну сторону. Если опередили другое ТС вообще без перестроений — это тоже опережение</figcaption>
+          </figure>
+        </div>
+
+        <details class="check">
+          <summary>Проверьте себя</summary>
+          <div class="check__body">
+            <p class="check__q">На многополосной дороге вы перестроились в соседнюю полосу того же направления и опередили грузовик. Это обгон?</p>
+            <button class="check__reveal">Показать ответ</button>
+            <p class="check__a" hidden><b>Нет.</b> Выезда на встречную полосу не было — это опережение.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- 2 -->
+      <section class="card section" id="s2" data-title="Путь обгона и скорость">
+        <p class="eyebrow">Раздел 2</p>
+        <h2>Путь обгона и скорость</h2>
+        <p class="lead">
+          <b>Путь обгона</b> — это расстояние, которое вы проходите на встречной полосе.
+          Рассчитывать его надо заранее — ещё в своей полосе, до того как вы выехали и даже до включения поворотника.
+          Для этого нужна калибровка глазомера и практика: опытный водитель не назовёт путь обгона в метрах,
+          но он всегда знает, хватит ему расстояния для обгона или нет.
+        </p>
+
+        <div class="callout callout--key">
+          <span class="callout__icon">📏</span>
+          <p>
+            Чем выше ваша скорость, тем <b>больше</b> путь на встречке. А чем меньше разница скоростей
+            с обгоняемым — тем путь <b>длиннее</b>. Обгон «в натяг», на чуть большей скорости — самый долгий и опасный.
+          </p>
+        </div>
+
+        <div class="calc" id="calc">
+          <div class="calc__head">
+            <h3>Калькулятор пути обгона</h3>
+            <p>Подвигайте ползунки и посмотрите, как меняется расстояние на встречной полосе.</p>
+          </div>
+          <div class="calc__body">
+            <div class="calc__controls">
+              <label class="slider">
+                <span class="slider__label">Ваша скорость <b id="v-mine-out">50</b> км/ч</span>
+                <input type="range" id="v-mine" min="50" max="130" step="5" value="50" />
+              </label>
+              <label class="slider">
+                <span class="slider__label">Скорость обгоняемого <b id="v-them-out">30</b> км/ч</span>
+                <input type="range" id="v-them" min="30" max="100" step="5" value="30" />
+              </label>
+              <label class="slider">
+                <span class="slider__label">Длина обгоняемого <b id="len-out">4,5</b> м</span>
+                <input type="range" id="len" min="4" max="20" step="0.5" value="4.5" />
+              </label>
+            </div>
+
+            <div class="calc__stage">
+              <svg class="road" id="calc-road" viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Анимированная схема обгона">
+                <rect x="0" y="0" width="640" height="190" rx="14" fill="#eef2f7"/>
+                <rect x="0" y="14" width="640" height="76" fill="#fde8e8"/>
+                <rect x="0" y="100" width="640" height="76" fill="#e9f1fb"/>
+                <line x1="0" y1="97" x2="640" y2="97" stroke="#94a3b8" stroke-width="3" stroke-dasharray="16 14"/>
+                <line x1="0" y1="176" x2="640" y2="176" stroke="#cbd5e1" stroke-width="3"/>
+                <line x1="0" y1="14" x2="640" y2="14" stroke="#cbd5e1" stroke-width="3"/>
+                <text x="12" y="36" fill="#b91c1c" font-size="13" font-weight="700">ВСТРЕЧКА</text>
+                <text x="12" y="136" fill="#1d4ed8" font-size="13" font-weight="700">МОЯ ПОЛОСА</text>
+                <g id="calc-truck"><rect x="0" y="0" width="120" height="40" rx="6" fill="#1e3a8a"/></g>
+                <g id="calc-me"><rect x="0" y="0" width="84" height="36" rx="6" fill="#2563eb"/><rect x="12" y="5" width="40" height="12" rx="3" fill="#bfdbfe"/></g>
+                <line id="calc-trace" x1="0" y1="0" x2="0" y2="0" stroke="#f59e0b" stroke-width="4" stroke-dasharray="8 6"/>
+              </svg>
+              <div class="calc__readouts">
+                <div class="readout readout--main">
+                  <span class="readout__value" id="calc-dist">—</span>
+                  <span class="readout__label">метров пути обгона</span>
+                </div>
+                <div class="readout">
+                  <span class="readout__value" id="calc-time">—</span>
+                  <span class="readout__label">секунд на встречке</span>
+                </div>
+                <div class="readout">
+                  <span class="readout__value" id="calc-delta">—</span>
+                  <span class="readout__label">км/ч разница скоростей</span>
+                </div>
+              </div>
+              <p class="calc__warn" id="calc-warn" hidden></p>
+            </div>
+          </div>
+          <p class="calc__note">
+            Расчёт для общего понимания: путь обгона = ваша скорость × время на встречке, а время зависит
+            от длины обгоняемого и разницы скоростей (запас спереди и сзади — по 15 м).
+            <b>Вычислять в метрах не обязательно — это интерактив для общего понимания.</b>
+          </p>
+        </div>
+
+        <p>
+          Именно поэтому главный навык — <b>глазомер</b>: вовремя решить, хватит ли места,
+          и не догадываться об этом уже на встречке.
+        </p>
+
+      </section>
+
+      <!-- 3 -->
+      <section class="card section" id="s3" data-title="Как подготовить обгон">
+        <p class="eyebrow">Раздел 3</p>
+        <h2>Как подготовить обгон</h2>
+        <p class="lead">Для подготовки задаём себе три вопроса:</p>
+
+        <div class="steps" id="steps">
+          <button class="step" data-step="0">
+            <span class="step__n">1</span>
+            <span class="step__t">Что на встречке?</span>
+            <span class="step__d">Смотрю прямо сейчас, ещё до включения поворотника.</span>
+          </button>
+          <button class="step" data-step="1">
+            <span class="step__n">2</span>
+            <span class="step__t">Кто впереди и позади меня?</span>
+            <span class="step__d">Впереди не обгоняет и не поворачивает налево. Сзади никто не начал обгон.</span>
+          </button>
+          <button class="step" data-step="2">
+            <span class="step__n">3</span>
+            <span class="step__t">Куда я вернусь?</span>
+            <span class="step__d">Смотрю со своей полосы: есть ли мне куда вернуться, есть ли пространство перед обгоняемым и хватит ли мне места.</span>
+          </button>
+          <div class="steps__detail" id="step-detail" aria-live="polite"></div>
+        </div>
+
+        <h3 class="sub">Подготовка</h3>
+        <ul class="tick">
+          <li>Прижаться ближе к середине дороги — чтобы лучше видеть встречку.</li>
+          <li>Увеличить дистанцию до машины впереди — так встречку будет видно ещё лучше, и появится место для разгона в своей полосе.</li>
+          <li>Набрать скорость <b>в своей полосе</b>. Начинать набор скорости на встречке — ошибка.</li>
+        </ul>
+
+        <div class="callout callout--ok">
+          <span class="callout__icon">✋</span>
+          <p><b>Имею право отказаться!</b> Если есть сомнения, можно не обгонять. Это не слабость, а рациональное решение. Доверяйте себе!</p>
+        </div>
+
+        <h3 class="sub">Выполнение обгона</h3>
+        <ul class="tick">
+          <li>Включить левый поворотник — так вы заявляете о своём намерении выполнить обгон.</li>
+          <li>Перестроиться на встречку уже на скорости.</li>
+          <li>Убедиться, что не подрезаю обгоняемого.</li>
+          <li>Вернуться в свой ряд с правым поворотником.</li>
+        </ul>
+
+        <div class="callout callout--note">
+          <span class="callout__icon">🔁</span>
+          <p>По правилам, мы должны выключить левый поворотник сразу после перестроения на встречку. Но в жизни всё происходит так быстро, что левый поворотник сразу переключается на правый.</p>
+        </div>
+
+        <div class="callout callout--warn">
+          <span class="callout__icon">⚠️</span>
+          <p><b>Не торопимся и не подрезаем обгоняемый автомобиль!</b> Это самая распространённая ошибка.</p>
+        </div>
+
+        <figure class="photo photo--wide">
+          <img src="pictures/slides/kogda-vernutsya.jpg" alt="Вид на обгоняющий автомобиль в зеркале заднего вида" loading="lazy" />
+          <figcaption>«Когда можно вернуться?» — ответ ищем в боковом зеркале. Вижу полностью нос обгоняемой машины — могу вернуться. Этот лайфхак поможет и при перестроениях: так вы никого не подрежете и выполните манёвр аккуратно.</figcaption>
+        </figure>
+
+
+        <details class="check">
+          <summary>Проверьте себя</summary>
+          <div class="check__body">
+            <p class="check__q">Вы решили обогнать и уже начали выезжать на встречку, но поняли, что не успеваете. Что делать?</p>
+            <button class="check__reveal">Показать ответ</button>
+            <p class="check__a" hidden><b>Возвращаемся в свою полосу и отказываемся от обгона.</b> Решение принимается до выезда — если появились сомнения, обгон не продолжаем.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- 4 -->
+      <section class="card section" id="s4" data-title="Что запрещено при обгоне">
+        <p class="eyebrow">Раздел 4</p>
+        <h2>Когда обгон выполнять запрещается</h2>
+        <p class="lead">Даже при свободной встречке обгон запрещён, если:</p>
+        <ul class="ban">
+          <li>
+            <span class="ban__mark">✕</span>
+            <div><b>ТС впереди выполняет обгон или объезд</b>, либо подало сигнал поворота налево. Обгонять вдвоём нельзя.</div>
+          </li>
+          <li>
+            <span class="ban__mark">✕</span>
+            <div><b>Следующее за вами ТС уже начало обгон.</b> Значит, ваш обгон откладывается.</div>
+          </li>
+          <li>
+            <span class="ban__mark">✕</span>
+            <div><b>Вы не сможете вернуться, не создавая помех.</b> Нет «места» в своей полосе — нет обгона. Не нужно рассчитывать, что вас пустят вернуться.</div>
+          </li>
+        </ul>
+
+        <div class="callout callout--note">
+          <span class="callout__icon">🧠</span>
+          <p>Обгон — это полностью решение водителя. Нельзя полагаться на подсказки других водителей или пассажиров и рассчитывать, что вас пропустят, дадут втиснуться в свой ряд. Все риски берём на себя и действуем разумно.</p>
+        </div>
+
+        <div class="callout callout--warn">
+          <span class="callout__icon">🚫</span>
+          <p><b>Обгоняемый не должен мешать обгону.</b></p>
+        </div>
+
+        <div class="photos">
+          <figure class="photo">
+            <img src="pictures/slides/povorot-nalevo.jpg" alt="Автомобили за грузовиком, один из них может поворачивать налево" loading="lazy" />
+            <figcaption>ТС впереди обгоняет или поворачивает налево — обгон запрещён</figcaption>
+          </figure>
+          <figure class="photo">
+            <img src="pictures/slides/prepyatstvovat.jpg" alt="Вид из-за руля: руки водителя на руле" loading="lazy" />
+            <figcaption>Обгоняемый не должен мешать обгону</figcaption>
+          </figure>
+        </div>
+
+        <details class="check">
+          <summary>Проверьте себя</summary>
+          <div class="check__body">
+            <p class="check__q">Машина впереди мигнула левым поворотником. Встречка пуста. Можно обгонять?</p>
+            <button class="check__reveal">Показать ответ</button>
+            <p class="check__a" hidden><b>Нет.</b> Впереди идущее ТС подало сигнал поворота налево — обгон запрещён, даже если встречная полоса свободна.</p>
+          </div>
+        </details>
+
+        <details class="check">
+          <summary>Кейс: обгоняемый ускорился</summary>
+          <div class="check__body">
+            <p class="check__q">Вы начали обгон, а обгоняемое ТС ускорилось. Что будете делать?</p>
+            <p class="case__opts">а) Обгонять любой ценой<br>б) Вернусь в свою полосу и откажусь от обгона<br>в) Буду сигналить и кричать</p>
+            <button class="check__reveal">Показать ответ</button>
+            <p class="check__a" hidden><b>Правильный ответ: б.</b> Культура вождения у всех разная. К сожалению, есть водители, которые пытаются самоутвердиться, пренебрегая правилами. Таких лучше держать перед собой. Не вступайте в бесполезную и опасную игру — вернитесь в свой ряд.</p>
+          </div>
+        </details>
+      </section>
+
+      <!-- 5 -->
+      <section class="card section" id="s5" data-title="Где обгон запрещён">
+        <p class="eyebrow">Раздел 5</p>
+        <h2>Где обгон запрещён</h2>
+        <p class="lead">Помимо обстановки, нужно оценить само место на дороге, где вы хотите совершить обгон. Обгон в неположенном месте не только опасен, но и карается лишением прав.</p>
+
+        <div class="grid-cards">
+          <div class="mini">
+            <h4>🚦 Регулируемые перекрёстки</h4>
+            <p>Светофор — затягивающий портал. Загорелся зелёный, встречные ускорились, чтобы успеть. Обгон в таких условиях может завершиться лобовым столкновением.</p>
+          </div>
+          <div class="mini">
+            <h4>🛣️ Нерегулируемые перекрёстки, если ваша дорога не главная</h4>
+            <p>Это те перекрёстки, где нужно уступать дорогу или применять правило правой руки.</p>
+          </div>
+          <div class="mini">
+            <h4>🚸 Пешеходные переходы</h4>
+            <p>Обгонять нельзя, но <b>перестроиться</b> можно.</p>
+          </div>
+          <div class="mini">
+            <h4>🚂 Ж/д переезды</h4>
+            <p>И ближе, чем за <b>100 метров</b> перед ними.</p>
+          </div>
+          <div class="mini">
+            <h4>🌉 Мосты, эстакады, путепроводы</h4>
+            <p>И <b>под</b> ними.</p>
+          </div>
+          <div class="mini">
+            <h4>🕳️ Тоннели</h4>
+            <p>Обгон запрещён на всём протяжении.</p>
+          </div>
+          <div class="mini mini--wide">
+            <h4>👁️ Ограниченная видимость</h4>
+            <p>В конце подъёма, на опасных поворотах и там, где не видно встречную полосу.</p>
+          </div>
+        </div>
+
+        <div class="callout callout--ok">
+          <span class="callout__icon">✅</span>
+          <p><b>Единственный перекрёсток, где разрешён обгон:</b> неравнозначный, когда вы на главной. При этом вся моя дорога — главная.</p>
+        </div>
+
+        <details class="check">
+          <summary>Кейс: главная дорога меняет направление</summary>
+          <div class="check__body">
+            <img class="case__img" src="pictures/slides/glavnaya-povorot.jpg" alt="Знак «Главная дорога» и табличка «Направление главной дороги»" loading="lazy" />
+            <p class="check__q">Перекрёсток, на котором главная дорога меняет направление. Можно ли обгонять?</p>
+            <button class="check__reveal">Показать ответ</button>
+            <p class="check__a" hidden><b>Нет.</b> Если главная дорога меняет направление, значит на главной не только вы: с поперечной дороги на перекрёсток тоже может выехать авто с главными правами. Во время обгона решать, кто первый, по помехе справа будет уже некогда.</p>
+          </div>
+        </details>
+
+        <h3 class="sub">Разбор «Здесь можно?»</h3>
+        <p class="muted">Отвечайте «Можно» или «Нельзя» — и сразу смотрите пояснение.</p>
+        <div class="tasks" id="tasks"></div>
+
+      </section>
+
+      <!-- 6 -->
+      <section class="card section" id="s6" data-title="Сколько машин обгонять разом">
+        <p class="eyebrow">Раздел 6</p>
+        <h2>Сколько машин можно обгонять разом?</h2>
+        <p class="lead">
+          Ответ — сколько сможем. Ограничения по количеству обгоняемых машин нет: можно обогнать группу ТС
+          за один выезд, если вы успеваете вернуться без помех.
+        </p>
+        <div class="callout callout--key">
+          <span class="callout__icon">📐</span>
+          <p><b>Обгоняемых может быть несколько</b>, а <b>обгоняющий всегда один</b>. Нельзя обгонять «паровозиком».</p>
+        </div>
+        <figure class="photo photo--wide">
+          <img src="pictures/slides/skolko-razom.jpg" alt="Автомобиль обгоняет сразу несколько машин на двухполосной дороге" loading="lazy" />
+          <figcaption>Можно обогнать несколько ТС за раз — если успеваете вернуться без помех.</figcaption>
+        </figure>
+      </section>
+
+      <!-- 7 -->
+      <section class="card section" id="s7" data-title="Знак «Обгон запрещён»">
+        <p class="eyebrow">Раздел 7</p>
+        <h2>Знак «Обгон запрещён» и его исключения</h2>
+        <div class="sign-row">
+          <div class="sign-badge">
+            <img src="pictures/icons/3.20.svg" alt="Дорожный знак 3.20 «Обгон запрещён»" />
+            <span>3.20</span>
+          </div>
+          <p>
+            Знак <b>3.20 «Обгон запрещён»</b> запрещает обгон всех транспортных средств. Но есть исключения —
+            те, кого обгонять можно в зоне действия этого знака:
+          </p>
+        </div>
+        <div class="exc-cards">
+          <figure class="exc-card">
+            <img src="pictures/exceptions/tihohod.jpg" alt="Тихоходное транспортное средство со знаком «Тихоходное ТС»" loading="lazy" />
+            <figcaption><b>Тихоходные ТС</b> — обозначены знаком и конструктивно не могут ехать быстрее 30 км/ч.</figcaption>
+          </figure>
+          <figure class="exc-card">
+            <img src="pictures/exceptions/guzhevaya.jpg" alt="Гужевая повозка" loading="lazy" />
+            <figcaption><b>Гужевые повозки</b></figcaption>
+          </figure>
+          <figure class="exc-card">
+            <img src="pictures/exceptions/dvuhkolesnye.jpg" alt="Двухколёсные: велосипед, мопед, мотоцикл без прицепа" loading="lazy" />
+            <figcaption><b>Все двухколёсные:</b> велосипеды, мопеды, мотоциклы без прицепа.</figcaption>
+          </figure>
+        </div>
+
+        <details class="check">
+          <summary>Проверьте себя</summary>
+          <div class="check__body">
+            <p class="check__q">Перед вами Kia Rio, которая едет не быстрее 30 км/ч. Можно ли её обогнать в зоне действия знака 3.20?</p>
+            <button class="check__reveal">Показать ответ</button>
+            <p class="check__a" hidden><b>Нет, нельзя.</b> Если авто едет медленно, это не означает, что оно тихоходное. Это не исключение для знака «Обгон запрещён».</p>
+          </div>
+        </details>
+        <div class="callout callout--note">
+          <span class="callout__icon">📍</span>
+          <p>
+            <b>Где заканчивается действие знака «Обгон запрещён»:</b><br>
+            1) ближайший перекрёсток,<br>
+            2) конец или начало населённого пункта (знак на белом фоне),<br>
+            3) знак «Конец зоны действия» 3.21 или 3.31,<br>
+            4) в соответствии с табличкой «Зона действия» под самим знаком.
+          </p>
+          <p>
+            Важно замечать эти знаки и сразу представлять, когда их действие кончится.
+          </p>
+          <p>
+            Если разметка стала прерывистой, это не значит, что обгонять уже можно. Изменение разметки
+            и «самостийные» перекрёстки не отменяют знак 3.20.
+          </p>
+        </div>
+      </section>
+
+      <!-- TEST -->
+      <section class="card section section--test" id="test" data-title="Итоговый тест">
+        <p class="eyebrow">Финал</p>
+        <h2>Итоговый тест</h2>
+        <p class="lead">12 вопросов по всему материалу. Выбирайте ответ — в конце увидите результат и разбор.</p>
+
+        <div class="test" id="test-app">
+          <div class="test__start" id="test-start">
+            <button class="btn btn--primary btn--big" id="test-begin">Начать тест</button>
+            <p class="muted" id="test-last"></p>
+          </div>
+
+          <div class="test__run" id="test-run" hidden>
+            <div class="test__bar">
+              <div class="progress"><div class="progress__bar"><div class="progress__fill" id="test-fill"></div></div></div>
+              <span class="test__counter" id="test-counter">1 / 12</span>
+            </div>
+            <p class="test__q" id="test-q"></p>
+            <div class="test__options" id="test-options"></div>
+            <p class="test__feedback" id="test-feedback" hidden></p>
+            <div class="test__nav">
+              <button class="btn btn--ghost" id="test-prev" disabled>← Назад</button>
+              <button class="btn btn--primary" id="test-next" disabled>Далее →</button>
+            </div>
+          </div>
+
+          <div class="test__result" id="test-result" hidden>
+            <div class="result__score" id="result-score">—</div>
+            <p class="result__verdict" id="result-verdict"></p>
+            <ul class="result__list" id="result-list"></ul>
+            <div class="test__nav">
+              <button class="btn btn--ghost" id="test-retry">Пройти заново</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <img class="footer__logo" src="pictures/LogoProspect.png" alt="Логотип автошколы" />
+        <p>
+          Теория по мастер-классу <b>«Настоящие обгоны»</b>. Прогресс сохраняется в вашем браузере и никуда не отправляется.
+        </p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
